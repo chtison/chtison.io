@@ -1,0 +1,8 @@
+# Main google cloud deployment manager configuration file
+
+imports:
+    - path: cluster.py
+
+resources:
+    - name: cluster
+      type: cluster.py
