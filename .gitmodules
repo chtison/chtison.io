@@ -1,0 +1,3 @@
+[submodule "web/hugo/assets/css/bootstrap"]
+	path = web/hugo/assets/bootstrap
+	url = https://github.com/twbs/bootstrap

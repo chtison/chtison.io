@@ -1,0 +1,9 @@
+baseURL: "https://chtison.io/"
+languageCode: "en-us"
+title: "chtison.io"
+canonifyURLs: true
+disableHugoGeneratorInject: True
+taxonomies: {}
+disableKinds:
+  - sitemap
+  - RSS
