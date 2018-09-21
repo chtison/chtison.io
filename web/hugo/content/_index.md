@@ -1,7 +1,4 @@
 ---
-title: ""
+particlesJS:
+  particles-js: particles-config.json
 ---
-
-## Email
-[[protected]]
-___
