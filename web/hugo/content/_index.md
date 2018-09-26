@@ -1,4 +1,4 @@
 ---
 particlesJS:
-  particles-js: particles-config.json
+  particles: particles-config.json
 ---

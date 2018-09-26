@@ -3,32 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {{ $style := resources.Get "styles.scss" | toCSS (dict "outputStyle" "compressed") | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
     <link rel="icon" href="/favicon.png">
-
     <title>chtison.io</title>
-    <!-- <script defer src="main.dart.js"></script> -->
-  </head>
-  <body>
-    {{ partial "header.html" }}
-
-    {{ block "main" . }}
-    {{ end }}
-
-    {{ partial "footer.html" }}
-    <!-- Optional JavaScript -->
+    {{ $style := resources.Get "styles.sass" | toCSS (dict "outputStyle" "compressed") | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
-{{ with .Params.particlesJS }}
-    {{ $particlesJS := resources.Get "particles.js" | minify | fingerprint }}
+    {{ range $v := .Params.scripts }}
+      {{ $script := resources.Get $v | minify | fingerprint }}
+    <script defer src="{{ $script.Permalink }}"></script>
+    {{ end }}
+  </head>
+  <body>
+    {{ partial "header.html" }}
+    {{ block "main" . }}{{ end }}
+    {{ partial "footer.html" }}
+    {{ with .Params.particlesJS }}
+      {{ $particlesJS := resources.Get "particles.js" | minify | fingerprint }}
     <script src="{{ $particlesJS.Permalink }}"></script>
-  {{ range $k, $v := . }}
-    {{ $particlesJSConfig := resources.Get $v | minify | fingerprint }}
+      {{ range $k, $v := . }}
+        {{ $particlesJSConfig := resources.Get $v | minify | fingerprint }}
     <script>particlesJS.load('{{ $k }}', '{{ $particlesJSConfig.Permalink }}');</script>
-  {{ end }}
-{{ end }}
+      {{ end }}
+    {{ end }}
   </body>
 </html>
