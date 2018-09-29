@@ -1,8 +1,8 @@
 .PHONY: build serve
 
 build:
-	rm -rf -- ../dist
-	hugo --minify -d ../dist
+	rm -rf -- public
+	hugo --minify
 
 serve:
 	hugo serve --bind 0.0.0.0

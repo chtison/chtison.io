@@ -4,7 +4,7 @@ apply:
 	kubectl apply -f nginx.yaml
 
 bucket:
-	gsutil -m rsync -d -r ../web/dist gs://chtison
+	gsutil -m rsync -d -r ../hugo/public gs://chtison
 
 configmap:
 	kubectl create configmap nginx --from-file=nginx/ --dry-run -o yaml | kubectl apply -f-

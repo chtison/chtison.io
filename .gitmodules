@@ -1,6 +1,6 @@
-[submodule "web/hugo/assets/bootstrap"]
-	path = web/hugo/assets/bootstrap
+[submodule "hugo/assets/bootstrap"]
+	path = hugo/assets/bootstrap
 	url = https://github.com/twbs/bootstrap
-[submodule "web/hugo/assets/font-awesome"]
-	path = web/hugo/assets/font-awesome
+[submodule "hugo/assets/font-awesome"]
+	path = hugo/assets/font-awesome
 	url = https://github.com/fortawesome/font-awesome
