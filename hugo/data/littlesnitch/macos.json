@@ -1,0 +1,173 @@
+{
+  "description" : "",
+  "name" : "Mac OS",
+  "rules" : [
+    {
+      "action" : "deny",
+      "creationDate" : 1538235026.822541,
+      "modificationDate" : 1538235026.822541,
+      "owner" : "me",
+      "process" : "\/System\/Library\/PrivateFrameworks\/HelpData.framework\/Versions\/A\/Resources\/helpd",
+      "remote" : "any"
+    },
+    {
+      "action" : "allow",
+      "creationDate" : 1538234216.4681311,
+      "modificationDate" : 1538234216.4681311,
+      "owner" : "system",
+      "ports" : "123",
+      "process" : "\/usr\/libexec\/timed",
+      "protocol" : "udp",
+      "remote-hosts" : "time-macos.apple.com"
+    },
+    {
+      "action" : "deny",
+      "creationDate" : 1538233853.8193221,
+      "modificationDate" : 1538233853.8193221,
+      "owner" : "system",
+      "process" : "\/System\/Library\/PrivateFrameworks\/ApplePushService.framework\/apsd",
+      "remote" : "any"
+    },
+    {
+      "action" : "allow",
+      "creationDate" : 1538233716.833591,
+      "modificationDate" : 1538233716.833591,
+      "owner" : "system",
+      "process" : "\/usr\/sbin\/netbiosd",
+      "remote" : "local-net"
+    },
+    {
+      "action" : "deny",
+      "creationDate" : 1538236377.1214941,
+      "modificationDate" : 1538236377.1214941,
+      "owner" : "me",
+      "process" : "\/System\/Library\/PrivateFrameworks\/CoreParsec.framework\/parsec-fbf",
+      "remote" : "any"
+    },
+    {
+      "action" : "deny",
+      "creationDate" : 1538239009.795619,
+      "modificationDate" : 1538239173.162406,
+      "owner" : "me",
+      "process" : "\/System\/Library\/CoreServices\/SystemUIServer.app\/Contents\/MacOS\/SystemUIServer",
+      "remote" : "any"
+    },
+    {
+      "action" : "allow",
+      "creationDate" : 1538238182.8106389,
+      "modificationDate" : 1538238210.1661329,
+      "owner" : "system",
+      "process" : "\/usr\/libexec\/configd",
+      "protocol" : "ipv6-icmp",
+      "remote" : "local-net"
+    },
+    {
+      "action" : "allow",
+      "creationDate" : 1538238096.0222821,
+      "direction" : "incoming",
+      "modificationDate" : 1538238144.6934199,
+      "owner" : "system",
+      "ports" : "68",
+      "process" : "\/usr\/libexec\/configd",
+      "protocol" : "udp",
+      "remote" : "local-net"
+    },
+    {
+      "action" : "deny",
+      "creationDate" : 1538238043.267957,
+      "modificationDate" : 1538238969.6051741,
+      "owner" : "me",
+      "process" : "\/System\/Library\/PrivateFrameworks\/IDS.framework\/identityservicesd.app\/Contents\/MacOS\/identityservicesd",
+      "remote" : "any"
+    },
+    {
+      "action" : "deny",
+      "creationDate" : 1538238038.0454721,
+      "modificationDate" : 1538239125.121511,
+      "owner" : "me",
+      "process" : "\/System\/Library\/PrivateFrameworks\/MessagesKit.framework\/Versions\/A\/Resources\/soagent.app\/Contents\/MacOS\/soagent",
+      "remote" : "any"
+    },
+    {
+      "action" : "deny",
+      "creationDate" : 1538238030.4008579,
+      "modificationDate" : 1538238936.05057,
+      "owner" : "me",
+      "process" : "\/usr\/libexec\/avconferenced",
+      "remote" : "any"
+    },
+    {
+      "action" : "deny",
+      "creationDate" : 1538238022.8938498,
+      "modificationDate" : 1538238980.6593471,
+      "owner" : "me",
+      "process" : "\/System\/Library\/PrivateFrameworks\/IMCore.framework\/imagent.app\/Contents\/MacOS\/imagent",
+      "remote" : "any"
+    },
+    {
+      "action" : "deny",
+      "creationDate" : 1538238001.607058,
+      "modificationDate" : 1538238001.607058,
+      "owner" : "me",
+      "process" : "\/System\/Library\/PrivateFrameworks\/GeoServices.framework\/Versions\/A\/XPCServices\/com.apple.geod.xpc\/Contents\/MacOS\/com.apple.geod",
+      "remote" : "any"
+    },
+    {
+      "action" : "deny",
+      "creationDate" : 1538237189.1784968,
+      "modificationDate" : 1538237189.1784968,
+      "owner" : "system",
+      "process" : "\/usr\/libexec\/nsurlsessiond",
+      "remote" : "any"
+    },
+    {
+      "action" : "allow",
+      "creationDate" : 1538240104.0898089,
+      "modificationDate" : 1538240151.9591179,
+      "owner" : "system",
+      "ports" : "5353",
+      "process" : "\/usr\/sbin\/mDNSResponder",
+      "protocol" : "udp",
+      "remote" : "local-net"
+    },
+    {
+      "action" : "allow",
+      "creationDate" : 1538239660.757931,
+      "modificationDate" : 1538239660.757931,
+      "owner" : "system",
+      "ports" : "53",
+      "process" : "\/usr\/sbin\/mDNSResponder",
+      "protocol" : "udp",
+      "remote" : "any"
+    },
+    {
+      "action" : "allow",
+      "creationDate" : 1538244162.830368,
+      "modificationDate" : 1538244162.830368,
+      "owner" : "system",
+      "ports" : "443",
+      "process" : "\/System\/Library\/CoreServices\/Software Update.app\/Contents\/Resources\/softwareupdated",
+      "protocol" : "tcp",
+      "remote-hosts" : "swscan.apple.com"
+    },
+    {
+      "action" : "deny",
+      "creationDate" : 1538244181.5489669,
+      "modificationDate" : 1538244641.3936281,
+      "owner" : "system",
+      "process" : "\/System\/Library\/PrivateFrameworks\/AssetCacheServices.framework\/Versions\/A\/XPCServices\/AssetCacheLocatorService.xpc\/Contents\/MacOS\/AssetCacheLocatorService",
+      "remote" : "any"
+    },
+    {
+      "action" : "allow",
+      "creationDate" : 1538247699.2654018,
+      "direction" : "incoming",
+      "modificationDate" : 1538248495.4751801,
+      "owner" : "system",
+      "ports" : "5353",
+      "process" : "\/usr\/sbin\/mDNSResponder",
+      "protocol" : "udp",
+      "remote" : "local-net"
+    }
+  ]
+}

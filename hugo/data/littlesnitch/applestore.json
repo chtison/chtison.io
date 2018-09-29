@@ -1,0 +1,86 @@
+{
+  "description" : "",
+  "name" : "Apple Store",
+  "rules" : [
+    {
+      "action" : "allow",
+      "creationDate" : 1538069220.404948,
+      "modificationDate" : 1538214330.9984899,
+      "owner" : "me",
+      "ports" : "443",
+      "process" : "\/Applications\/App Store.app\/Contents\/MacOS\/App Store",
+      "protocol" : "tcp",
+      "remote-domains" : "mzstatic.com"
+    },
+    {
+      "action" : "allow",
+      "creationDate" : 1538069137.668849,
+      "modificationDate" : 1538214330.999121,
+      "owner" : "me",
+      "ports" : "443",
+      "process" : "\/Applications\/App Store.app\/Contents\/MacOS\/App Store",
+      "protocol" : "tcp",
+      "remote-domains" : "apple.com"
+    },
+    {
+      "action" : "allow",
+      "creationDate" : 1538137985.900383,
+      "modificationDate" : 1538214330.999548,
+      "owner" : "me",
+      "ports" : "443",
+      "process" : "\/System\/Library\/PrivateFrameworks\/AppStoreDaemon.framework\/Support\/appstoreagent",
+      "protocol" : "tcp",
+      "remote-domains" : "itunes.apple.com"
+    },
+    {
+      "action" : "allow",
+      "creationDate" : 1538069268.1619191,
+      "modificationDate" : 1538214330.9999871,
+      "owner" : "me",
+      "ports" : "80",
+      "process" : "\/System\/Library\/PrivateFrameworks\/CommerceKit.framework\/Versions\/A\/Resources\/commerce",
+      "protocol" : "tcp",
+      "remote-hosts" : "osxapps.itunes.apple.com"
+    },
+    {
+      "action" : "allow",
+      "creationDate" : 1538069253.791389,
+      "modificationDate" : 1538214331.0004292,
+      "owner" : "me",
+      "ports" : "443",
+      "process" : "\/System\/Library\/PrivateFrameworks\/CommerceKit.framework\/Versions\/A\/Resources\/commerce",
+      "protocol" : "tcp",
+      "remote-domains" : "apple.com"
+    },
+    {
+      "action" : "allow",
+      "creationDate" : 1538137960.6758029,
+      "modificationDate" : 1538214331.000809,
+      "owner" : "me",
+      "ports" : "443",
+      "process" : "\/System\/Library\/PrivateFrameworks\/CommerceKit.framework\/Versions\/A\/Resources\/storeassetd",
+      "protocol" : "tcp",
+      "remote-domains" : "itunes.apple.com"
+    },
+    {
+      "action" : "allow",
+      "creationDate" : 1538069279.045572,
+      "modificationDate" : 1538214331.001194,
+      "owner" : "me",
+      "ports" : "80",
+      "process" : "\/System\/Library\/PrivateFrameworks\/CommerceKit.framework\/Versions\/A\/Resources\/storedownloadd",
+      "protocol" : "tcp",
+      "remote-hosts" : "osxapps.itunes.apple.com"
+    },
+    {
+      "action" : "allow",
+      "creationDate" : 1538069300.856025,
+      "modificationDate" : 1538214331.0015669,
+      "owner" : "me",
+      "ports" : "443",
+      "process" : "\/System\/Library\/PrivateFrameworks\/CommerceKit.framework\/Versions\/A\/Resources\/storedownloadd",
+      "protocol" : "tcp",
+      "remote-domains" : "itunes.apple.com"
+    }
+  ]
+}
