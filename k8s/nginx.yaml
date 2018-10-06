@@ -2,6 +2,8 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: nginx
+  labels:
+    app: nginx
 spec:
   replicas: 1
   selector:
@@ -18,35 +20,33 @@ spec:
           configMap:
             name: nginx
             defaultMode: 0444
+        - name: tls
+          secret:
+            secretName: "chtison.io"
+            defaultMode: 0444
       containers:
         - name: nginx
           image: nginx:1-alpine
           volumeMounts:
-            - mountPath: /etc/nginx
+            - mountPath: /etc/nginx/
               name: nginx
+            - mountPath: /usr/local/secrets/
+              name: tls
 ---
 kind: Service
 apiVersion: v1
 metadata:
   name: nginx
+  labels:
+    app: nginx
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
     - name: https
       port: 443
+      targetPort: 443
+    - name: http
+      port: 80
       targetPort: 80
   selector:
     app: nginx
----
-kind: Ingress
-apiVersion: extensions/v1beta1
-metadata:
-  name: nginx
-  annotations:
-    kubernetes.io/ingress.global-static-ip-name: chtison-io
-spec:
-  backend:
-    serviceName: nginx
-    servicePort: 443
-  tls:
-    - secretName: tls

@@ -10,7 +10,7 @@ def GenerateConfig(context):
 		'properties': {
 			'zone': 'europe-west1-d',
 			'cluster': {
-				'initialClusterVersion': '1.10.6-gke.2',
+				'initialClusterVersion': '1.10.7-gke.2',
 				'masterAuth': {'username': ''},
 				'nodePools': [{
 					'name': 'very-low-cost',
